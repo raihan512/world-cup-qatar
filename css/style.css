@@ -153,12 +153,14 @@ header .live-btn {
     text-align: center;
 }
 
-.schedule-content, .blog-content {
+.schedule-content,
+.blog-content {
     display: grid;
     grid-template-columns: 1fr auto;
 }
 
-.schedule-items, .blogs {
+.schedule-items,
+.blogs {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
@@ -244,52 +246,61 @@ h3.countries {
 }
 
 /* Footer Part Start */
-footer{
+footer {
     background-color: #161616;
     padding-top: 130px;
     padding-bottom: 200px;
     /* width: 100vw; */
 }
-.footer-title{
+
+.footer-title {
     text-align: center;
     font-size: 40px;
     color: #fff;
     font-weight: 600;
     line-height: 60px;
 }
+
 footer hr {
     margin: 50px 0;
     border-color: rgba(255, 255, 255, 0.1);
 }
-.footer-link{
+
+.footer-link {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
 }
-.link-btn{
+
+.link-btn {
     text-decoration: none;
     font-size: 16px;
     font-weight: 500;
     color: #b9b9b9;
     margin-right: 20px;
 }
-.social-link{
+
+.social-link {
     margin-top: 50px;
-text-align: center;
+    text-align: center;
 }
+
 .fa-facebook,
 .fa-twitter,
-.fa-linkedin{
+.fa-linkedin {
     font-size: 25px;
     color: #b9b9b9;
     margin-right: 20px;
 }
+
 /* -----------------------------------------------------Responsive CSS----------------------------------------------------- 
 For mobile view max width is 767px
 For tab view max width is 991px
 */
 @media screen and (max-width: 1366px) {
-    .schedule-items, .blogs {
+
+    .schedule-items,
+    .blogs {
         grid-template-columns: repeat(2, 1fr);
     }
 }
@@ -308,7 +319,8 @@ For tab view max width is 991px
         text-overflow: ellipsis;
     }
 
-    .schedule-content, .blog-content {
+    .schedule-content,
+    .blog-content {
         grid-template-columns: 1fr;
         grid-row-gap: 20px;
     }
@@ -330,7 +342,8 @@ For tab view max width is 991px
         margin: 0;
     }
 
-    .schedule-items, .blogs {
+    .schedule-items,
+    .blogs {
         grid-template-columns: repeat(2, 1fr);
     }
 
@@ -363,7 +376,8 @@ For tab view max width is 991px
         width: 75%;
     }
 
-    .schedule-items, .blogs {
+    .schedule-items,
+    .blogs {
         grid-template-columns: 1fr;
     }
 
@@ -380,15 +394,18 @@ For tab view max width is 991px
         visibility: hidden;
 
     }
-    footer{
+
+    footer {
         padding: 20px 0;
     }
-    .footer-link{
+
+    .footer-link {
         flex-direction: column;
         align-items: center;
         font-size: 14px;
     }
-    .link-btn{
+
+    .link-btn {
         margin: 0;
         margin-top: 20px;
     }
