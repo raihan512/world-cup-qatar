@@ -273,7 +273,17 @@ footer hr {
     color: #b9b9b9;
     margin-right: 20px;
 }
-
+.social-link{
+    margin-top: 50px;
+text-align: center;
+}
+.fa-facebook,
+.fa-twitter,
+.fa-linkedin{
+    font-size: 25px;
+    color: #b9b9b9;
+    margin-right: 20px;
+}
 /* -----------------------------------------------------Responsive CSS----------------------------------------------------- 
 For mobile view max width is 767px
 For tab view max width is 991px
