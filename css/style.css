@@ -8,15 +8,16 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    display: flex;
+    /* display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    overflow-x: hidden;
+    overflow-x: hidden; */
 }
 
 .container {
     width: 80vw;
+    margin: 0 auto;
 }
 
 .section-margin {
@@ -166,7 +167,7 @@ header .live-btn {
 .schedule-item {
     border: 1px solid #E8E8E8;
     height: 242px;
-    width: 312px;
+    width: 302px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -199,19 +200,19 @@ h3.countries {
 
 /* Blog Section Part Start */
 .blog {
-    height: 362px;
-    width: 312px;
+    height: 335px;
+    width: 302px;
     border: 1px solid;
     border-radius: 10px;
     text-align: left;
 }
 
-.blog-image {
+.blog-image img {
     width: 100%;
 }
 
 .blog-text {
-    padding: 20px;
+    padding: 10px;
 }
 
 .blog-btn {
@@ -246,15 +247,43 @@ h3.countries {
 footer{
     background-color: #161616;
     padding-top: 130px;
-    padding-bottom: 250px;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-bottom: 200px;
+    /* width: 100vw; */
+}
+.footer-title{
+    text-align: center;
+    font-size: 40px;
+    color: #fff;
+    font-weight: 600;
+    line-height: 60px;
+}
+footer hr {
+    margin: 50px 0;
+    border-color: rgba(255, 255, 255, 0.1);
+}
+.footer-link{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.link-btn{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: #b9b9b9;
+    margin-right: 20px;
 }
 
 /* -----------------------------------------------------Responsive CSS----------------------------------------------------- 
 For mobile view max width is 767px
 For tab view max width is 991px
 */
+@media screen and (max-width: 1366px) {
+    .schedule-items, .blogs {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media screen and (max-width: 991px) {
     .header-title {
         font-size: 40px;
@@ -340,5 +369,17 @@ For tab view max width is 991px
     .view-all-btn {
         visibility: hidden;
 
+    }
+    footer{
+        padding: 20px 0;
+    }
+    .footer-link{
+        flex-direction: column;
+        align-items: center;
+        font-size: 14px;
+    }
+    .link-btn{
+        margin: 0;
+        margin-top: 20px;
     }
 }
