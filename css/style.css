@@ -8,12 +8,18 @@
 
 body {
     font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
 }
 
 .container {
-    width: 1321px;
-    margin-left: auto;
-    margin-right: auto;
+    width: 80vw;
+}
+
+.section-margin {
     margin-top: 50px;
     margin-bottom: 80px;
 }
@@ -41,20 +47,43 @@ body {
     }
 }
 
-/* Header Area Start */
-.header-content {
-    overflow: hidden;
-    padding-left: 79px;
-    padding-right: 106px;
-    border-radius: 30px;
+/* Buttons */
+.live-btn,
+.view-all-btn {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    background-color: #DD0000;
+    padding: 12px 30px;
+    font-weight: 400;
+    border-radius: 5px;
+}
+
+.live-btn .fa-angle-right {
+    margin-left: 10px;
+}
+
+.view-all-btn {
+    margin-top: 20px;
+    visibility: hidden;
+
+}
+
+/* Header Part Start */
+
+header {
     background-color: #161616;
+    border-radius: 30px;
     display: grid;
-    align-items: end;
     grid-template-columns: repeat(2, 1fr);
+    align-items: center;
 }
 
 .header-text {
-    margin-top: 111px;
+    padding: 50px;
+    padding-bottom: 0;
     opacity: 0;
     transition: 0.5s;
     animation: fromleft 0.8s ease-in 0.3s 1 forwards;
@@ -64,151 +93,186 @@ body {
     font-weight: 700;
     font-size: 70px;
     line-height: 80px;
-    color: #ffffff;
+    color: #fff;
 }
 
 .header-para {
     font-weight: 400;
     font-size: 16px;
-    color: #ffffff;
+    color: #fff;
     margin-top: 20px;
     margin-bottom: 30px;
 }
 
-.live-btn {
-    text-decoration: none;
-    color: #ffffff;
-    padding: 16px 25px;
-    margin-bottom: 60px;
-    background-color: #DD0000;
-    border-radius: 5px;
-    display: inline-block;
-}
-
-.fa-angle-right {
-    margin-left: 10px;
-}
-
 .header-image {
-    margin-top: 33px;
+    padding-right: 20px;
     opacity: 0;
+    transition: 0.5s;
     animation: fromright 0.8s ease-in 0.3s 1 forwards;
-
 }
 
 .header-image img {
     width: 100%;
 }
 
-/* Menu Start */
-.menu {
-    width: 312px;
-    height: 312px;
-    padding: 30px;
-    text-align: center;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    background-color: #161616;
+header .live-btn {
+    margin-bottom: 50px;
 }
 
-.menu a {
+/* Schedule Part Start */
+/* Schdeule Menu Part Start */
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 312px;
+    width: 312px;
+    background-color: #161616;
+    border-radius: 10px;
+}
+
+.menu-btn {
     font-weight: 500;
     font-size: 20px;
     text-decoration: none;
     color: #161616;
-    background-color: #ffffff;
-    padding: 17px 39px;
-    border-radius: 10px;
+    background-color: #fff;
+    padding: 15px 35px;
+    margin: 0 30px;
+    border-radius: 5px;
 }
-
-.menu .active {
-    color: #ffffff;
+.menu-btn.active{
     background-color: #DD0000;
+    color: #fff;
+}
+/* Schedule Section Part Start */
+.schedule-section {
+    text-align: center;
 }
 
-/* Schedule */
-.schedule {
-    display: flex;
-    justify-content: space-between;
+.schedule-content {
+    display: grid;
+    grid-template-columns: 1fr auto;
 }
 
 .schedule-items {
     display: grid;
-    grid-gap: 20px;
     grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
 }
 
 .schedule-item {
-    border: 1px solid;
-    padding: 30px;
-    text-align: center;
+    border: 1px solid #E8E8E8;
+    height: 242px;
+    width: 312px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
 }
 
 .flags {
     display: flex;
-    justify-content: space-around;
     align-items: center;
-    margin-bottom: 20px;
 }
 
-.flags h2 {
+.flags img {
+    width: 100%;
+}
+
+.flags strong {
+    font-weight: 700;
+    color: #161616;
+    font-size: 16px;
     margin: 0 10px;
 }
+h3.countries{
+    font-weight: 600;
+    font-size: 20px;
+    color: #161616;
+    margin-top: 50px;
+}
 
-/* Tab View 834px */
-@media screen and (max-width: 834px) {
-    .container {
-        width: 734px;
-    }
-
-    .header-content {
-        padding-right: 17px;
-        padding-left: 30px;
-    }
-
-    .header-text {
-        margin-top: 30px;
-    }
-
-    .header-title {
+/* -----------------------------------------------------Responsive CSS----------------------------------------------------- 
+For mobile view max width is 767px
+For tab view max width is 991px
+*/
+@media screen and (max-width: 991px) {
+    .header-title{
         font-size: 40px;
         line-height: 50px;
     }
-
-    .header-para {
+    .header-para{
         font-size: 14px;
+        white-space: nowrap; 
+        width: 250px; 
+        overflow: hidden;
+        text-overflow: ellipsis; 
     }
-
-    /* Menu */
+    .schedule-content {
+        grid-template-columns: 1fr;
+        grid-row-gap: 20px;
+    }
+    .schedule-item{
+        margin: 0 auto;
+    }
     .menu {
         flex-direction: row;
+        background-color: transparent;
+        height: auto;
+        width: auto;
+        justify-content: space-between;
     }
 
-    /* Schedule Start */
-    .schedule {
-        display: flex;
+    .menu-btn {
+        border: 1px solid #161616;
+        margin: 0;
     }
 
-    .schedule-item {
-        border: 1px solid;
+    .schedule-items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .view-all-btn {
+        visibility: visible;
     }
 }
 
-/* Mobile View 375px */
-@media screen and (max-width: 375px) {
-    .container {
-        width: 334px;
-    }
-
-    .header-content {
+@media screen and (max-width: 767px) {
+    header {
+        grid-template-columns: 1fr;
+        grid-row-gap: 20px;
         text-align: center;
+    }
+    .header-text{
+        padding: 20px;
+    }
+    .header-title{
+        font-size: 22px;
+        line-height: 33px;
+    }
+    header .live-btn {
+        margin-bottom: 0;
+    }
+    .header-image img {
+        width: 75%;
+    }
+    .schedule-items {
         grid-template-columns: 1fr;
     }
 
-    .live-btn {
-        margin-bottom: 21px;
+    .menu {
+        flex-direction: column;
+        align-items: center;
     }
 
+    .menu-btn {
+        margin-bottom: 10px;
+    }
+
+    .view-all-btn {
+        visibility: hidden;
+
+    }
 }
